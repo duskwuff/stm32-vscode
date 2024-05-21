@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OpenOCD",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/program.elf",
+            "preLaunchTask": "cmake build",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg",
+            ],
+            "openOCDLaunchCommands": [],
+            "svdFile": "${workspaceFolder}/stm32f401.svd",
+        }
+    ]
+}
